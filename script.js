@@ -37,6 +37,7 @@ function carta () {
     tagTexto.innerText = words[index];
     texto.appendChild(tagTexto);    
     }
+    aleatorio();
 }
 //Obtive ajuda do Emerson Alves no racicionio da condicional (linha 45).
 function verificar () {
@@ -46,10 +47,13 @@ function verificar () {
         carta();
     }
 }
-
-
-
-
-
+function aleatorio () {
+    let array = ['newspaper', 'magazine1', 'magazine2', 'big', 'medium', 'reallybig', 'rotateleft', 'rotateright','skewleft', 'skewright']
+    for (index = 0; index < texto.children.length; index += 1 ) {
+        let random = parseInt(Math.random() * 3);
+        texto.children[index].classList.add(array[random]);
+    }
+}
 botao();
 evento('criar-carta', 'click', verificar);
+
