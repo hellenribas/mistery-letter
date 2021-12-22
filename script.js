@@ -11,6 +11,7 @@ function evento (id, type, callback) {
 const pai = pegaId('menu'); 
 const texto = pegaId('carta-gerada');
 const input = pegaId('carta-texto');
+const contar = pegaId('carta-contador');
 let words = [];
 const styles = ['newspaper', 'magazine1', 'magazine2'];
 const sizes = ['big', 'medium', 'reallybig']; 
@@ -37,10 +38,12 @@ function carta () {
     remove();
     arrayPalavras();
     for (let index = 0; index < words.length; index += 1) {
+    if (words[index] !== '') {
     let tagTexto = criaElem('span');
     tagTexto.innerText = words[index];
     texto.appendChild(tagTexto);    
     }
+}
     classificando();
 }
 //Obtive ajuda do Emerson Alves no racicionio da condicional (linha 45).
@@ -58,10 +61,22 @@ function aleat () {
 }
 function classificando () {
     for (let index = 0; index < texto.children.length; index += 1 ) {
-        console.log(aleat());
         texto.children[index].className = aleat();
 }
+    cont();
 }
+function cont () {
+    let contador = 0;
+    let arrayWords = arrayPalavras();
+    for (i = 0; i < arrayWords.length; i += 1) {
+    if (words[i] !== '') {
+        contador += 1;
+    } 
+}
+    contar.innerText = contador;
+}
+
+
 botao();
 evento('criar-carta', 'click', verificar);
 evento('carta-gerada', 'click', function (event) {
