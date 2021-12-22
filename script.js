@@ -12,6 +12,10 @@ const pai = pegaId('menu');
 const texto = pegaId('carta-gerada');
 const input = pegaId('carta-texto');
 let words = [];
+const styles = ['newspaper', 'magazine1', 'magazine2'];
+const sizes = ['big', 'medium', 'reallybig']; 
+const rotates = ['rotateleft', 'rotateright'];
+const skews = ['skewleft', 'skewright'];
 
 function remove () {
     texto.innerHTML = '';
@@ -37,7 +41,7 @@ function carta () {
     tagTexto.innerText = words[index];
     texto.appendChild(tagTexto);    
     }
-    aleatorio();
+    classificando();
 }
 //Obtive ajuda do Emerson Alves no racicionio da condicional (linha 45).
 function verificar () {
@@ -47,13 +51,22 @@ function verificar () {
         carta();
     }
 }
-function aleatorio () {
-    let array = ['newspaper', 'magazine1', 'magazine2', 'big', 'medium', 'reallybig', 'rotateleft', 'rotateright','skewleft', 'skewright']
-    for (index = 0; index < texto.children.length; index += 1 ) {
-        let random = parseInt(Math.random() * 3);
-        texto.children[index].classList.add(array[random]);
-    }
+function aleat () {
+    let aleNum3 = parseInt(Math.random() * 3);
+    let aleNum2 = parseInt(Math.random() * 2);
+    return `${styles[aleNum3]} ${sizes[aleNum3]} ${rotates[aleNum2]} ${skews[aleNum2]}`;
+}
+function classificando () {
+    for (let index = 0; index < texto.children.length; index += 1 ) {
+        console.log(aleat());
+        texto.children[index].className = aleat();
+}
 }
 botao();
 evento('criar-carta', 'click', verificar);
+evento('carta-gerada', 'click', function (event) {
+    if (event.target.id !== 'carta-gerada') {
+    event.target.className = aleat();
+}
+})
 
