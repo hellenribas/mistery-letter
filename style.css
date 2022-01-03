@@ -1,3 +1,40 @@
+body {
+    margin: 0;
+    background-image: url(effect.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(6, 59, 109);
+}
+h1 {
+    font-size: 60px;
+    font-family: 'Rock 3D', cursive;
+    color: rgb(26, 233, 112);
+}
+#pai {
+  margin: 20%;
+}
+#menu {
+    text-align: center;
+}
+#header {
+    text-align: center;
+}
+#carta-contador {
+    font-size: 27px;
+    font-weight: 700;
+    color: aliceblue;
+}
+#carta-texto {
+    border-radius: 10px;
+}
+#criar-carta {
+    margin-top: 14px;
+    border-radius: 15px;
+    background-color: rgba(26, 233, 112, 0.781);
+}
+#criar-carta:hover {
+    box-shadow: 2px 2px 4px 2px white;
+}
 .newspaper {
 background-color: antiquewhite;
 font-family: 'Times New Roman';
