@@ -1,88 +1,106 @@
 body {
-    margin: 0;
-    background-image: url(effect.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: rgb(6, 59, 109);
+  margin: 0;
+  background-image: url(effect.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(6, 59, 109);
 }
+
 h1 {
-    font-size: 60px;
-    font-family: 'Rock 3D', cursive;
-    color: rgb(26, 233, 112);
+  font-size: 60px;
+  font-family: 'Rock 3D', cursive;
+  color: rgb(26, 233, 112);
 }
+
 #pai {
   margin: 20%;
 }
+
 #menu {
-    text-align: center;
+  text-align: center;
 }
+
 #header {
-    text-align: center;
+  text-align: center;
 }
+
 #carta-contador {
-    font-size: 27px;
-    font-weight: 700;
-    color: aliceblue;
+  font-size: 27px;
+  font-weight: 700;
+  color: aliceblue;
 }
+
 #carta-texto {
-    border-radius: 10px;
+  border-radius: 10px;
 }
+
 #criar-carta {
-    margin-top: 14px;
-    border-radius: 15px;
-    background-color: rgba(26, 233, 112, 0.781);
+  margin-top: 14px;
+  border-radius: 15px;
+  background-color: rgba(26, 233, 112, 0.781);
 }
+
 #criar-carta:hover {
-    box-shadow: 2px 2px 4px 2px white;
+  box-shadow: 2px 2px 4px 2px white;
 }
+
 .newspaper {
-background-color: antiquewhite;
-font-family: 'Times New Roman';
-font-weight: bold;
-margin: 10px;
+  background-color: antiquewhite;
+  font-family: ' Times New Roman ';
+  font-weight: bold;
+  margin: 10px;
 }
+
 .magazine1 {
-background-color: teal;
-color:white;
-font-family: Verdana;
-font-weight: 900;
-text-transform: uppercase;
-margin: 10px;
+  background-color: teal;
+  color: white;
+  font-family: Verdana;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 10px;
 }
+
 .magazine2 {
-background-image: url(images/pink-pattern.png);
-color: fuchsia;
-font-family: Verdana;
-font-weight: 900;
-margin: 10px;
+  background-image: url(images/pink-pattern.png);
+  color: fuchsia;
+  font-family: Verdana;
+  font-weight: 900;
+  margin: 10px;
 }
+
 .medium {
-    background-color: aqua;
-    border-radius: 50px 3px;
-    font-size: 20px;
-    padding: 8px;
+  background-color: aqua;
+  border-radius: 50px 3px;
+  font-size: 20px;
+  padding: 8px;
 }
+
 .big {
-    background-color: rgba(235, 235, 92, 0.808);
-    border-radius: 0px 0px 10px 5px;
-    font-size: 30px;
-    padding: 10px;
+  background-color: rgba(235, 235, 92, 0.808);
+  border-radius: 0px 0px 10px 5px;
+  font-size: 30px;
+  padding: 10px;
 }
+
 .reallybig {
-    background-color: rgb(153, 106, 197);
-    border-radius: 20px 0px;
-    font-size: 40px;
-    padding: 15px;
+  background-color: rgb(153, 106, 197);
+  border-radius: 20px 0px;
+  font-size: 40px;
+  padding: 15px;
 }
+
 .rotateleft {
-    transform: rotate(-5deg);
+  transform: rotate(-5deg);
 }
+
 .rotateright {
-    transform: rotate(5deg);
+  transform: rotate(5deg);
 }
+
 .skewleft {
-    transform: skewX(10deg);
+  transform: skewX(10deg);
 }
+
 .skewright {
-    transform: skewX(-10deg);
+  transform: skewX(-10deg);
 }
